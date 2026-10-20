@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152e">
+  <meta name="description" content="Logow Academy — free learning resources, Tamil and English medium study support for Classes 1–12, lesson videos, exam updates and learning materials.">
+  <title>Logow Academy | Learn • Grow • Achieve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="live-dot"></span> Learning made simpler — explore Logow Academy resources <a href="https://www.youtube.com/@logowacademy?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube ↗</a></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Logow Academy home">
+      <img src="assets/logow-metallic-logo.png" alt="Logow Academy logo" onerror="this.style.display='none'">
+      <span><strong>LOGOW <i>ACADEMY</i></strong><small>LEARN · GROW · ACHIEVE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#classes">Classes</a><a href="#library">Video library</a><a href="#updates">News & exams</a><a href="#about">About</a>
+      <button class="profile-button" id="profileOpen" aria-label="Open student profile"><span class="profile-icon">♙</span> My profile</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="spark">✦</span> YOUR LEARNING COMPANION</div>
+        <h1>Learn today.<br><span>Lead tomorrow.</span></h1>
+        <p class="hero-lede">Clear lessons, useful study resources and exam support for students from Class 1 to Class 12 — in Tamil and English medium.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#classes">Explore classes <span>→</span></a>
+          <a class="btn btn-outline" href="https://www.youtube.com/@logowacademy?sub_confirmation=1" target="_blank" rel="noopener"><span class="youtube-mark">▶</span> Subscribe on YouTube</a>
+        </div>
+        <div class="hero-proof"><span class="proof-icon">✓</span> Student-friendly learning <span class="proof-separator">•</span> <span class="proof-icon">✓</span> Easy-to-find lessons</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-glow"></div>
+        <div class="learning-card card-top"><span class="mini-icon">✦</span><span><b>Learn at your pace</b><small>One lesson at a time</small></span></div>
+        <div class="hero-book"><div class="book-spine"></div><div class="book-line"></div><div class="book-line short"></div><div class="book-emblem">L<span>A</span></div><div class="book-label">KNOWLEDGE<br>OPENS DOORS</div></div>
+        <div class="learning-card card-bottom"><span class="round-check">✓</span><span><b>Class 1–12</b><small>Find your next lesson</small></span></div>
+        <div class="floating-star star-a">✧</div><div class="floating-star star-b">✦</div>
+      </div>
+    </section>
+
+    <section class="quick-stats section-wrap" aria-label="Academy highlights">
+      <div><span class="stat-icon">▤</span><span><b>Classes 1–12</b><small>School learning</small></span></div>
+      <div><span class="stat-icon">文</span><span><b>Tamil & English</b><small>Choose your medium</small></span></div>
+      <div><span class="stat-icon">▶</span><span><b>Video lessons</b><small>Learn visually</small></span></div>
+      <div><span class="stat-icon">✧</span><span><b>Exam support</b><small>Prepare with confidence</small></span></div>
+    </section>
+
+    <section class="section-wrap section-block" id="classes">
+      <div class="section-heading"><div><div class="eyebrow">START LEARNING</div><h2>Choose your <span>class</span></h2><p>Find study content by class, medium and subject.</p></div><a class="text-link" href="#library">Browse video library ↗</a></div>
+      <div class="filter-panel">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search classes, subjects or lessons…" aria-label="Search learning resources"><kbd>⌘ K</kbd></label>
+        <label class="select-label">Medium <select id="mediumFilter"><option value="all">All mediums</option><option value="Tamil">Tamil medium</option><option value="English">English medium</option></select></label>
+        <label class="select-label">Subject <select id="subjectFilter"><option value="all">All subjects</option><option>Tamil</option><option>English</option><option>Mathematics</option><option>Science</option><option>Social Science</option><option>Physics</option><option>Chemistry</option><option>Biology</option><option>Computer Science</option><option>Commerce</option><option>Accountancy</option><option>Economics</option></select></label>
+      </div>
+      <div class="class-grid" id="classGrid" aria-live="polite"></div>
+      <p class="empty-state" id="classEmpty" hidden>No matching class or subject found. Try another search.</p>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-wrap section-block">
+        <div class="section-heading"><div><div class="eyebrow">WATCH & LEARN</div><h2>Featured <span>lessons</span></h2><p>Explore the latest learning content from Logow Academy.</p></div><span class="section-pill"><span class="live-dot"></span> Learning library</span></div>
+        <div class="video-grid" id="videoGrid"></div>
+        <div class="library-note"><span>ⓘ</span> Sample lesson cards are included to demonstrate the website. Replace the sample video links and titles with your published lessons before launch.</div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="updates">
+      <div class="section-heading"><div><div class="eyebrow">STAY PREPARED</div><h2>News & <span>exam updates</span></h2><p>Keep important school announcements and exam resources in one place.</p></div><span class="text-link static-note">Updates area</span></div>
+      <div class="news-grid">
+        <article class="news-card news-feature"><div class="news-illustration exam-illustration"><span class="paper-icon">▤</span><span class="illustration-tag">EXAM PREP</span><div class="paper-lines"></div></div><div class="news-body"><div class="news-meta"><span class="news-tag">STUDY GUIDE</span><span>Learning resource</span></div><h3>Prepare for your next exam</h3><p>Use your school timetable, syllabus and lesson notes to make a simple revision plan. Check this section for resources added by Logow Academy.</p><a href="https://www.youtube.com/@logowacademy" target="_blank" rel="noopener" class="text-link">Explore learning videos ↗</a></div></article>
+        <article class="news-card"><div class="news-illustration news-blue"><span class="calendar-icon">▦</span><div class="cal-lines"></div><span class="calendar-caption">PLAN • REVISE • REPEAT</span></div><div class="news-body"><div class="news-meta"><span class="news-tag blue-tag">TIMETABLE</span><span>Student planning</span></div><h3>Build a study timetable</h3><p>Set a daily goal, revise important topics and leave time to practise questions.</p><a href="#classes" class="text-link">Choose a class ↗</a></div></article>
+        <article class="news-card"><div class="news-illustration news-violet"><span class="bell-icon">♢</span><div class="announcement-lines"></div><span class="calendar-caption">ACADEMY UPDATES</span></div><div class="news-body"><div class="news-meta"><span class="news-tag violet-tag">ANNOUNCEMENTS</span><span>Stay connected</span></div><h3>Follow academy updates</h3><p>Visit the channel for newly published videos, study materials and educational updates.</p><a href="https://www.youtube.com/@logowacademy" target="_blank" rel="noopener" class="text-link">Visit YouTube channel ↗</a></div></article>
+      </div>
+      <p class="small-disclaimer">This static version displays example update cards. Publishing and managing news or timetable images from a dashboard requires a backend or a connected content service.</p>
+    </section>
+
+    <section class="subscribe-band">
+      <div class="section-wrap subscribe-inner"><div class="subscribe-symbol">▶</div><div><div class="eyebrow">LEARN WITH US</div><h2>Make learning a daily habit.</h2><p>Subscribe to Logow Academy for educational videos and study support.</p></div><a class="btn btn-light" href="https://www.youtube.com/@logowacademy?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube ↗</a></div>
+    </section>
+
+    <section class="section-wrap section-block about-section" id="about">
+      <div class="about-logo"><img src="assets/logow-book-logo.png" alt="Logow Academy book logo" onerror="this.style.display='none'"><div class="about-glow"></div></div>
+      <div class="about-copy"><div class="eyebrow">ABOUT LOGOW ACADEMY</div><h2>Knowledge grows when <span>we share it.</span></h2><p>Logow Academy is an educational initiative created to help students find learning videos and useful school-study resources in one convenient place.</p><p>Our goal is to make lessons easier to discover and encourage students to keep learning, practising and asking questions.</p><div class="about-values"><span>✦ Student-focused</span><span>✦ Simple learning</span><span>✦ Keep improving</span></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wave"></div>
+    <div class="section-wrap footer-main">
+      <div class="footer-brand"><a class="brand footer-brand-link" href="#home"><img src="assets/logow-metallic-logo.png" alt="Logow Academy logo" onerror="this.style.display='none'"><span><strong>LOGOW <i>ACADEMY</i></strong><small>LEARN · GROW · ACHIEVE</small></span></a><p>Helping students learn with clarity, confidence and curiosity.</p><a class="footer-youtube" href="https://www.youtube.com/@logowacademy?sub_confirmation=1" target="_blank" rel="noopener"><span>▶</span> Subscribe to our channel</a></div>
+      <div class="footer-links"><h4>Explore</h4><a href="#classes">Classes 1–12</a><a href="#library">Video library</a><a href="#updates">News & exams</a><a href="#about">About us</a></div>
+      <div class="footer-links"><h4>Connect</h4><a href="https://www.youtube.com/@logowacademy" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.instagram.com/logow_etern/" target="_blank" rel="noopener">Instagram ↗</a><button class="footer-contact" id="contactButton">WhatsApp contact</button></div>
+    </div>
+    <div class="section-wrap footer-bottom"><span>© <span id="year"></span> Logow Academy. All rights reserved.</span><span>S. Logeshwaran &amp; L. Gowsika</span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="profileModal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+      <button class="modal-close" id="profileClose" aria-label="Close profile">×</button><div class="modal-avatar">♙</div><div class="eyebrow">STUDENT SPACE</div><h2 id="profileTitle">Welcome to Logow Academy</h2><p class="modal-copy">This profile preview works in your browser only. It does not create a secure online account or sync your details across devices.</p>
+      <label class="form-label" for="displayName">Your display name</label><input id="displayName" class="modal-input" placeholder="Enter a name" maxlength="40">
+      <button class="btn btn-primary full-width" id="saveProfile">Save on this device</button><p class="profile-status" id="profileStatus" aria-live="polite"></p>
+    </section>
+  </div>
+  <div class="subscribe-modal-backdrop" id="subscribeModal" hidden>
+    <section class="subscribe-modal" role="dialog" aria-modal="true" aria-labelledby="subscribeTitle"><button class="modal-close" id="subscribeClose" aria-label="Close subscription prompt">×</button><div class="youtube-large">▶</div><div class="eyebrow">SUPPORT OUR LEARNING JOURNEY</div><h2 id="subscribeTitle">Have you visited our YouTube channel?</h2><p>Discover educational videos and new study resources from Logow Academy.</p><a class="btn btn-primary full-width" href="https://www.youtube.com/@logowacademy?sub_confirmation=1" target="_blank" rel="noopener" id="subscribeGo">Subscribe on YouTube ↗</a><button class="skip-button" id="subscribeDismiss">Maybe later</button><small>We cannot verify your YouTube subscription status from this website.</small></section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
